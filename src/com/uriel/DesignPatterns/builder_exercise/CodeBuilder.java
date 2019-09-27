@@ -1,21 +1,25 @@
 package com.uriel.DesignPatterns.builder_exercise;
 
+
 public class CodeBuilder
 {
 
-    public CodeBuilder(String className)
-    {
-        // todo
+    private Class aClass = new Class();
+
+    public CodeBuilder(String className) {
+        this.aClass.setClassName(className);
     }
 
     public CodeBuilder addField(String name, String type)
     {
-        // todo
+        this.aClass.getFields().add(new Field(name, type));
+        return this;
     }
 
     @Override
     public String toString()
     {
-        // todo
+        return aClass.toString();
     }
+
 }
