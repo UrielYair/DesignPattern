@@ -2,9 +2,9 @@ package com.uriel.DesignPatterns.prototype_exercise;
 
 class Line
 {
-    public Point start, end;
+    private Point start, end;
 
-    public Line(Point start, Point end)
+    private Line(Point start, Point end)
     {
         this.start = start;
         this.end = end;
@@ -12,6 +12,8 @@ class Line
 
     public Line deepCopy()
     {
-        // todo
+        return new Line(
+                new Point(this.start),
+                new Point(this.end));
     }
 }

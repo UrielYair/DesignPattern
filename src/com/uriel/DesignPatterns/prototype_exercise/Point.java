@@ -1,12 +1,17 @@
 package com.uriel.DesignPatterns.prototype_exercise;
 
 class Point{
-    public int x, y;
+    private int x, y;
 
-    public Point(int x, int y)
+    private Point(int x, int y)
     {
         this.x = x;
         this.y = y;
+    }
+
+    Point(Point other)
+    {
+        this(other.x,other.y);
     }
 }
 
